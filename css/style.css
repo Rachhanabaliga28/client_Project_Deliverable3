@@ -1,0 +1,410 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    color: #333;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    justify-self: center;
+}
+
+#index-page .classroom-image {
+    max-width: 100%;
+    height: auto;
+    max-height: 650px;
+    display: block;
+    margin: 1rem auto;
+}
+
+.caps-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Skip to Main Content */
+.skip-link {
+    position: absolute;
+    top: -1000px;
+    left: 0;
+    background: #ffcc00;
+    color: #000;
+    padding: 10px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    position: absolute;
+    top: 0;
+}
+
+/* Navigation */
+nav {
+    background: #00274C;
+    padding: 1rem;
+}
+
+nav ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 1rem;
+    text-align: center;
+}
+
+nav a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2rem;
+    padding: 0.75rem;
+    background: #004080;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    position: relative;
+}
+
+nav a.active {
+    background: #ffcc00;
+    color: #00274C;
+    font-weight: bold;
+    border: 2px solid #00274C;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+nav a:focus,
+nav a:hover {
+    outline: 3px solid #ffcc00;
+    text-decoration: underline;
+}
+
+/* Layout that follows Mobile First design*/
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+header,
+footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+h1,
+h2,
+h3 {
+    color: #00274C;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-bottom: 2.5rem;
+    padding-top: 1rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p,
+ul,
+li {
+    font-size: 1.3rem;
+}
+
+header img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    padding: 0.5rem 0;
+}
+
+/* CAPS Page - 2-column Grid */
+.caps-services {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 0;
+    list-style: none;
+}
+
+.service {
+    background: #f8f8f8;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    min-width: 0;
+}
+
+.service img {
+    max-width: 100%;
+    height: auto;
+    margin: 0.5rem 0;
+}
+
+.caps-services a {
+    color: #004080;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.caps-services a:visited {
+    color: #004080;
+}
+
+.caps-services a:hover,
+.caps-services a:focus {
+    text-decoration: underline;
+}
+
+/* Food Pantry Page with a 2 Column Layout*/
+.food-pantry-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 1rem;
+    align-items: start;
+}
+
+.left-column,
+.right-column {
+    display: grid;
+    gap: 1.5rem;
+}
+
+.food-pantry-grid iframe,
+.food-pantry-grid img {
+    max-width: 100%;
+    height: auto;
+}
+
+.key-resources h2 {
+    color: #00274C;
+    margin-bottom: 1rem;
+}
+
+.key-resources ul {
+    list-style: none;
+    padding: 0;
+}
+
+.key-resources ul li {
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+    list-style-type: disc;
+}
+
+.key-resources a {
+    color: #004080;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.key-resources a:hover {
+    text-decoration: underline;
+}
+
+.sub-resources {
+    margin-left: 1.5rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Footer Styling*/
+footer {
+    background: #00274C;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.5rem 0;
+}
+footer a {
+    color: #ffcc00;
+    text-decoration: underline;
+}
+
+footer a:visited {
+    color: #ffcc00;
+}
+
+/* Tablet & Desktop (768px and wider)*/
+@media only screen and (min-width: 768px) {
+
+    nav {
+        width: 100%;
+        margin: 0;
+        padding: 1rem 0;
+        background-color: #00274C;
+        box-sizing: border-box;
+    }
+
+    nav ul {
+        display: grid;
+        grid-template-columns: repeat(4, auto);  /* https://css-tricks.com/auto-sizing-columns-css-grid-auto-fill-vs-auto-fit/ */
+        justify-content: center;
+        gap: 1rem;
+        padding: 1rem 0;
+    }
+    /* Layout changes for wider screen size */
+    main {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 1rem;
+        text-align: left;
+    }
+
+    section {
+        padding: 1.5rem 0;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    h2,
+    h3 {
+        text-align: left;
+        margin-bottom: 1rem;
+    }
+
+    p,
+    ul,
+    li {
+        max-width: 900px;
+        margin: 0 auto 1rem;
+        line-height: 1.6;
+    }
+
+    img {
+        display: block;
+        margin: 1.5rem auto;
+        max-width: 100%;
+        height: auto;
+    }
+
+    footer {
+        background: #00274C;
+        color: white;
+        text-align: center;
+        padding: 2rem;
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* 404 Page Styling */
+#page-404 main.error-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem 1rem;
+    min-height: 60vh;
+}
+
+#page-404 h1 {
+    font-size: 3rem;
+    margin-bottom: 0.2rem;
+    color: #00274C;
+}
+
+#page-404 p {
+    max-width: 600px;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#page-404 .error-img {
+    width: 380px;
+    height: auto;
+    margin: 1rem auto;
+    display: block;
+}
+
+#page-404 .btn-return {
+    margin-top: 1rem;
+    padding: 0.6rem 1.2rem;
+    background-color: #00274C;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+#page-404 .btn-return:hover {
+    background-color: #004080;
+}
+
+/* Unique Addition - Scroll to Top Button */
+#scroll-top {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    background-color: #004080;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+    z-index: 100;
+  }
+  #scroll-top:hover {
+    background-color: #004080;
+  }
